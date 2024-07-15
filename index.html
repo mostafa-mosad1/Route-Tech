@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Route Tech</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row g-4 mt-4 p-4">
+        <div class="col-md-6">
+          
+            <select
+              class="form-select checked p-3"
+              aria-label="Default select example"
+            ></select>
+          
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input
+              list="Transaction"
+              type="text"
+              class="form-control amounts"
+              id="TransactionAcounts"
+              placeholder="Transaction Amount"
+            />
+            <label for="TransactionAcounts">Transaction Amount</label>
+            <datalist id="Transaction"> </datalist>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Transfers</th>
+            <th scope="col">ID Customer</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody class="formBody"></tbody>
+      </table>
+    </div>
+
+    <div class="container my-5">
+      <canvas id="myChart" class="d-none mb-5"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
