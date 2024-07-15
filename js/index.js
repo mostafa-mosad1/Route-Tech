@@ -1,6 +1,7 @@
 let formBody = document.querySelector(".formBody");
 let checked = document.querySelector(".checked");
 let amounts = document.querySelector(".amounts");
+let canv = document.querySelector(".canv");
 
 let cartona = ``;
 let start = 1;
@@ -40,6 +41,7 @@ checked.addEventListener("change", function (e) {
 
   const ctx = document.getElementById("myChart");
   ctx.classList.remove("d-none");
+  canv.classList.remove("d-none");
   new Chart(ctx, {
     type: "bar",
     data: {
@@ -99,6 +101,7 @@ amounts.addEventListener("input", function (e) {
   }
   const ctx = document.getElementById("myChart");
   ctx.classList.remove("d-none");
+  canv.classList.remove("d-none");
 
   new Chart(ctx, {
     type: "bar",
@@ -160,6 +163,6 @@ async function renderTable() {
 }
 
 async function data() {
-  let api = await fetch(`../json/data.json`);
+  let api = await fetch(`data.json`);
   return await api.json();
 }
