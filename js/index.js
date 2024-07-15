@@ -10,7 +10,6 @@ let amount = [];
 let date = [];
 renderTable();
 
-
 checked.addEventListener("change", function (e) {
   let selected = this.value;
   let cartona = ``;
@@ -29,8 +28,6 @@ checked.addEventListener("change", function (e) {
       start++;
       amount.push(trans.amount);
       date.push(trans.date);
-    }else{
-     
     }
   });
   formBody.innerHTML = cartona;
